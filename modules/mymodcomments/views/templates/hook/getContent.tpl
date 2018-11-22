@@ -5,15 +5,22 @@
          La configuration de mon module
       </div>
       <div class="form-wrapper">
+        {if isset($confirmation)}
+        <div class="alert alert-success">
+        La configuration a bien été mise à jour
+        </div>
+        {/if}
          <div class="form-group">
             <label class="control-label col-lg-3">Activer les notes :</label>
             <div class="col-lg-9">
-               <img src="../img/admin/enabled.gif" alt="" />
-               <input type="radio" id="enable_grades_1" name="enable_grades" value="1" />
-               <label class="t" for="enable_grades_1">Oui</label>
-               <img src="../img/admin/disabled.gif" alt="" />
-               <input type="radio" id="enable_grades_0" name="enable_grades" value="0" checked />
-               <label class="t" for="enable_grades_0">Non</label>
+                <img src="../img/admin/enabled.gif" alt="" />
+                <input type="radio" id="enable_grades_1" name="enable_grades" value="1"
+                {if $enable_grades eq '1'}checked{/if} />
+                <label class="t" for="enable_grades_1">Oui</label>
+                <img src="../img/admin/disabled.gif" alt="" />
+                <input type="radio" id="enable_grades_0" name="enable_grades" value="0"
+                {if $enable_grades ne '1'}checked{/if} />
+                <label class="t" for="enable_grades_0">Non</label>
             </div>
          </div>
          <div class="form-group">

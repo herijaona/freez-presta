@@ -59,6 +59,7 @@
     <div class="container">
        <div class="row">
         <div class="col-md-2 hidden-sm-down" id="_desktop_logo">
+        {hook h='displayProductTabConten' mod='mymodcomments'}
             {if $page.page_name == 'index'}
               <h1>
                 <a href="{$urls.base_url}">
